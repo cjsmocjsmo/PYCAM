@@ -4,6 +4,14 @@ import subprocess
 import threading
 import time
 
+
+#command to connect to this stream
+# vlc --demux h264 tcp/h264://10.0.4.60:9999
+# ffplay h264 -fflags nobuffer -flags low_delay -framedrop tcp://10.0.4.60:9999
+# for 2 streams in one window 
+# mpv --no-cache --untimed --demuxer-lavf-format=h264 --external-file=tcp://10.0.4.67:9999 \
+# --lavfi-complex='[vid1][vid2]hstack=inputs=2[vo]' tcp://10.0.4.60:9999
+
 HOST = "0.0.0.0"
 PORT = 9999
 WIDTH = 640
