@@ -1,0 +1,14 @@
+[Unit]
+Description=PYCAM camera client
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/share/pycam/PYCAM
+ExecStart=/usr/bin/python3 /usr/share/pycam/PYCAM/pycamclient.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
