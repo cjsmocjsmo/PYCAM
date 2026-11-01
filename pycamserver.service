@@ -6,7 +6,7 @@ Wants=network-online.target
 [Service]
 Type=simple
 WorkingDirectory=/usr/share/pycam/PYCAM
-ExecStart=/usr/bin/python3 /usr/share/pycam/PYCAM/pycamclient.py
+ExecStart=/usr/bin/python3 /usr/share/pycam/PYCAM/pycamserver.py
 Restart=always
 RestartSec=5
 
