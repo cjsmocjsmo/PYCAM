@@ -35,7 +35,7 @@ var upgrader = websocket.Upgrader{
 }
 
 func main() {
-	listen := flag.String("listen", ":8080", "HTTP listen address")
+	listen := flag.String("listen", ":8090", "HTTP listen address")
 	cam1 := flag.String("cam1", "10.0.4.60:9999", "camera 1 address")
 	cam2 := flag.String("cam2", "10.0.4.67:9999", "camera 2 address")
 	fps := flag.Int("fps", 60, "camera framerate (must match pycamserver.py)")
